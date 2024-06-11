@@ -8,21 +8,13 @@ public class Authenticator {
         String password = 
                 JOptionPane.showInputDialog("Password");
         
-        if(
-            username != null && password != null &&
-            (
-                (username.equals("burd") &&
-                password.equals("swordfish")) ||
-                (username.equals("hritter") &&
-                password.equals("preakston"))
-
-            )
-        )
-        {
-            JOptionPane.showMessageDialog(null, "Welcome");
-        } else {
-            JOptionPane.showMessageDialog(null, "Password is incorrect"); 
+        if (!(username == null || password == null)) {
+            if ((username.equals("burd") && password.equals("swordfish")) ||
+                (username.equals("hritter") && password.equals("preakston"))) {
+                JOptionPane.showMessageDialog(null, "Welcome");
+            } else {
+                JOptionPane.showMessageDialog(null, "Password is incorrect"); 
+            }
         }
-        }
-        
     }
+}
